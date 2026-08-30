@@ -43,9 +43,7 @@ a manual confirmation prompt.
 - No streaming yet — replies are simulated with a typewriter effect after
   the full response arrives
 
-## Screenshots
 
-_Add a terminal screenshot or two here once you've got a session you like._
 
 ## Requirements
 
