@@ -1,21 +1,51 @@
-# PRTS — Terminal AI Assistant (Arknights-inspired)
+# PRTS_Terminal
 
-A terminal chatbot styled after **PRTS**, the Origin OS AI from *Arknights*.
-Boot animation, typewriter text, a calm-and-clinical "Doctor"-addressing
-persona, and three swappable LLM backends:
+A terminal AI assistant styled after **PRTS**, the Origin OS AI from
+*Arknights*. Boot animation, typewriter text, a calm-and-clinical
+"Doctor"-addressing persona, three swappable LLM backends, and controlled
+local file access.
+
+> Solo project, actively in development — built as a personal exercise in
+> prompt engineering, multi-provider LLM integration, and building an
+> AI assistant with real (but safely gated) local capabilities.
 
 - **Google Gemini** — free-tier API key
 - **Mistral AI** — free-tier API key
 - **Ollama** — fully local, no key, no internet needed after the model is pulled
 
-It can also be granted read-only access to a single local folder, which it
-can list and read from using a simple built-in tool protocol.
+It can also be granted access to a single local folder — list, read,
+write, append, and delete files — with every modifying action gated behind
+a manual confirmation prompt.
 
 > **Fan project disclaimer:** This is an unofficial, non-commercial fan
 > project inspired by *Arknights* (developed by Hypergryph, published by
 > Yostar/Gryphline). It is not affiliated with or endorsed by them. All
 > Arknights names, characters, and lore referenced here belong to their
 > respective owners.
+
+## Status
+
+**Working:**
+- Multi-backend chat (Gemini, Mistral, Ollama)
+- PRTS boot sequence and persona
+- Local folder access: list / read / write / append / delete, with
+  confirmation gating on modifying actions
+- Automatic grounding against real folder contents (prevents the model
+  from inventing files or content it never actually saw)
+- Persistent conversation history across sessions
+
+**Known limitations:**
+- Markdown from the model (`**bold**`, `* bullets`) prints as raw
+  characters instead of rendering — cosmetic, on the roadmap
+- Smaller local models (e.g. `llama3`) can be inconsistent about following
+  the tool-call protocol for anything the automatic context doesn't
+  already cover
+- No streaming yet — replies are simulated with a typewriter effect after
+  the full response arrives
+
+## Screenshots
+
+_Add a terminal screenshot or two here once you've got a session you like._
 
 ## Requirements
 
@@ -25,8 +55,8 @@ can list and read from using a simple built-in tool protocol.
 ## 1. Setup
 
 ```bash
-git clone https://github.com/<your-username>/prts.git
-cd prts
+git clone https://github.com/adamepaolo/PRTS_Terminal.git
+cd PRTS_Terminal
 
 python3 -m venv venv
 source venv/bin/activate
@@ -170,4 +200,5 @@ Contributions and forks welcome — feel free to open an issue or PR.
 
 ## License
 
-[MIT](LICENSE) — do whatever you'd like with it, no warranty provided.
+[Apache License 2.0](LICENSE) — free to use, modify, and distribute, with
+attribution and no warranty.
