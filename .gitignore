@@ -1,0 +1,24 @@
+# Environment / secrets
+.env
+*.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Test artifacts
+.pytest_cache/
+*.egg-info/
+build/
+dist/
