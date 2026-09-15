@@ -1,5 +1,8 @@
 # PRTS_Terminal
 
+[![Tests](https://github.com/adamepaolo/PRTS_Terminal/actions/workflows/tests.yml/badge.svg)](https://github.com/adamepaolo/PRTS_Terminal/actions/workflows/tests.yml)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
 A terminal AI assistant styled after **PRTS**, the Origin OS AI from
 *Arknights*. Boot animation, typewriter text, a calm-and-clinical
 "Doctor"-addressing persona, three swappable LLM backends, and a
