@@ -51,7 +51,7 @@ human confirmation.
 
 ## Screenshots
 
-_Add a terminal screenshot or two here once you've got a session you like._
+_N/A_
 
 ## Requirements
 
